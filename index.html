@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A modern and stylish online alarm clock with interactive features. Set alarms, track time, and enjoy a user-friendly experience."
+    />
+    <meta
+      name="keywords"
+      content="alarm clock, online clock, time management, web app, alarms, time tracking"
+    />
+
+    <!-- Open Graph meta tags for social media -->
+    <meta
+      property="og:title"
+      content="Wake Up Refreshed with AlarmMate - Your Smart Alarm Clock"
+    />
+    <meta
+      property="og:description"
+      content="A modern and stylish online alarm clock with interactive features. Set alarms, track time, and enjoy a user-friendly experience."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="assets/favicon.ico" />
+
+    <!-- Twitter meta tags for social media -->
+    <meta
+      name="twitter:title"
+      content="Start Your Day Right with AlarmMate - Your Smart Alarm Clock"
+    />
+    <meta
+      name="twitter:description"
+      content="A modern and stylish online alarm clock with interactive features. Set alarms, track time, and enjoy a user-friendly experience."
+    />
+    <meta name="twitter:image" content="assets/favicon.ico" />
+
+    <!-- Title of the page -->
+    <title>Alarm Clock</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="card" id="card">
+        <div class="alarm-clock">
+          <div class="alarm-body">
+            <div class="hours-in-between one"></div>
+            <div class="hours-in-between two"></div>
+            <div class="hours-in-between four"></div>
+            <div class="hours-in-between five"></div>
+            <div class="hours-in-between seven"></div>
+            <div class="hours-in-between eight"></div>
+            <div class="hours-in-between ten"></div>
+            <div class="hours-in-between eleven"></div>
+            <div class="quarter-hour twelve"></div>
+            <div class="quarter-hour three"></div>
+            <div class="quarter-hour six"></div>
+            <div class="quarter-hour nine"></div>
+            <div class="hour-hand clock-hands"></div>
+            <div class="minute-hand clock-hands"></div>
+            <div class="seconds-hand clock-hands"></div>
+            <div class="hand-knob"></div>
+          </div>
+          <div class="alarm-bells bell1"></div>
+          <div class="bell-stand stand1"></div>
+          <div class="snooze-top"></div>
+          <div class="snooze-bottom"></div>
+          <div class="alarm-bells bell2"></div>
+          <div class="bell-stand stand2"></div>
+          <div class="alarm-legs leg1"></div>
+          <div class="alarm-legs leg2"></div>
+        </div>
+
+        <div class="clock" id="clock"></div>
+
+        <div class="alarm-container">
+          <h2>Set Alarm</h2>
+          <input
+            type="number"
+            id="alarmHours"
+            placeholder="Hours"
+            min="1"
+            max="12"
+          />
+          <input
+            type="number"
+            id="alarmMinutes"
+            placeholder="Minutes"
+            min="0"
+            max="59"
+          />
+          <input
+            type="number"
+            id="alarmSeconds"
+            placeholder="Seconds"
+            min="0"
+            max="59"
+          />
+          <select id="amPm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+          <button onclick="setAlarm()">Set Alarm</button>
+        </div>
+
+        <div class="alarms-container">
+          <h2>Alarms</h2>
+          <ul id="alarmsList"></ul>
+        </div>
+      </div>
+      <div class="theme-toggler">
+        <input
+          type="checkbox"
+          id="toggleThemeBtn"
+          class="theme-toggle"
+          onclick="toggleTheme()"
+        />
+        <label for="toggleThemeBtn" class="toggle-label">
+          <span class="toggle-text" id="toggleText">Dark</span>
+        </label>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

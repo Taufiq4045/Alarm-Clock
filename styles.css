@@ -1,0 +1,480 @@
+:root {
+  --theme-color: #ecf0f1;
+  --themetoggle-color: #2c3e50;
+  --text-dark: #34495e;
+  --text-light: #2c3e50;
+  --border-dark: #1a252f;
+  --border-light: #bdc3c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('assets/paris.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: var(--theme-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+}
+
+/*---------------section start----------------------*/
+/* Animated Clock styling starts here */
+.alarm-clock {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes clock {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: scale(1.2);
+  }
+  2%,
+  12%,
+  22%,
+  32%,
+  42%,
+  52%,
+  62%,
+  72%,
+  82%,
+  92% {
+    transform: skew(-10deg);
+  }
+  4%,
+  14%,
+  24%,
+  34%,
+  44%,
+  54%,
+  64%,
+  74%,
+  84%,
+  94% {
+    transform: skew(10deg);
+  }
+  6%,
+  16%,
+  26%,
+  36%,
+  46%,
+  56%,
+  66%,
+  76%,
+  86%,
+  96% {
+    transform: skew(0deg);
+  }
+}
+
+.alarm-clock * {
+  position: absolute;
+}
+
+.alarm-body {
+  width: 10rem;
+  height: 10rem;
+  border: 0.3rem solid black;
+  border-radius: 50%;
+  box-shadow: 0rem -1rem 0 0 #407b6387;
+  top: 20%;
+  background-image: url('/assets/Bg_Alarm.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.alarm-body * {
+  position: absolute;
+}
+
+.alarm-bells {
+  width: 3.5rem;
+  height: 1.5rem;
+  background: linear-gradient(#38d6f94a 4%, black 100%);
+  border-radius: 50% 50% 20% 20%;
+  z-index: 1;
+}
+
+.alarm-bells.bell1 {
+  transform: rotate(-43deg);
+  top: 10%;
+  left: 10%;
+}
+
+.alarm-bells.bell2 {
+  transform: rotate(43deg);
+  top: 10%;
+  right: 10%;
+}
+
+.bell-stand {
+  width: 0.7rem;
+  height: 1.2rem;
+  background-color: black;
+}
+
+.stand1 {
+  transform: rotate(-40deg);
+  top: 17%;
+  left: 25%;
+  border-radius: 0% 0% 25% 25%;
+}
+
+.stand2 {
+  transform: rotate(40deg);
+  top: 17%;
+  right: 25%;
+  border-radius: 0% 0% 25% 25%;
+}
+
+.snooze-top {
+  background-color: #3f7a8791;
+  width: 2.5rem;
+  height: 1rem;
+  top: 4%;
+  border-radius: 10%;
+  z-index: 1;
+}
+
+.snooze-bottom {
+  background-color: black;
+  width: 0.5rem;
+  height: 1rem;
+  top: 10%;
+  border-radius: 20%;
+}
+
+.hand-knob {
+  width: 1rem;
+  height: 1rem;
+  background-color: black;
+  border-radius: 50%;
+  top: 46%;
+  left: 46%;
+}
+
+.clock-hands {
+  border-radius: 0% 0% 50% 50%;
+  transform-origin: 50% 0%;
+}
+
+.seconds-hand {
+  width: 0.3rem;
+  height: 4.5rem;
+  top: 50%;
+  left: 49%;
+  background-color: black;
+}
+
+.minute-hand {
+  width: 0.4rem;
+  height: 3.5rem;
+  top: 51%;
+  left: 49%;
+  background-color: #9d6515;
+}
+
+.hour-hand {
+  width: 0.5rem;
+  height: 2.2rem;
+  top: 52%;
+  left: 48%;
+  background-color: #c92727;
+}
+
+.hours-in-between {
+  width: 0.05rem;
+  height: 1rem;
+  background-color: black;
+}
+
+.one {
+  top: 6%;
+  left: 73%;
+  transform: rotate(30deg);
+}
+
+.two {
+  top: 22%;
+  left: 90%;
+  transform: rotate(60deg);
+}
+
+.four {
+  top: 67%;
+  left: 89%;
+  transform: rotate(120deg);
+}
+
+.five {
+  top: 83%;
+  left: 73%;
+  transform: rotate(150deg);
+}
+
+.seven {
+  top: 83%;
+  left: 27%;
+  transform: rotate(30deg);
+}
+
+.eight {
+  top: 67%;
+  left: 11%;
+  transform: rotate(60deg);
+}
+
+.ten {
+  top: 23%;
+  left: 11%;
+  transform: rotate(120deg);
+}
+
+.eleven {
+  top: 5%;
+  left: 27%;
+  transform: rotate(150deg);
+}
+
+.quarter-hour {
+  width: 0.15rem;
+  height: 1.5rem;
+  background-color: black;
+}
+
+.twelve {
+  top: 0%;
+  left: 49.5%;
+}
+
+.three {
+  top: 42%;
+  left: 92%;
+  transform: rotate(90deg);
+}
+
+.six {
+  top: 84%;
+  left: 50%;
+}
+
+.nine {
+  top: 42%;
+  right: 92%;
+  transform: rotate(90deg);
+}
+
+.alarm-legs {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #82a4ad;
+  border: 0.15rem solid black;
+  border-radius: 50%;
+}
+
+.leg1 {
+  top: 80%;
+  left: 26%;
+}
+
+.leg2 {
+  top: 80%;
+  right: 26%;
+}
+/* Animated Clock styling End here */
+/*---------------section end----------------------*/
+
+/*---------------section start----------------------*/
+/* Alarm Details Starts here */
+.clock {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Alarm Container to Set Alarm */
+.alarm-container {
+  text-align: center;
+}
+
+.alarm-container h2 {
+  color: var(--themetoggle-color);
+  margin-bottom: 10px;
+}
+
+.alarm-container input,
+.alarm-container select {
+  display: inline-block;
+  width: calc(25% - 5px);
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.alarm-container select {
+  width: calc(25% - 5px);
+}
+
+.alarm-container button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.alarm-container button:hover {
+  background-color: #45a049;
+}
+
+.alarm-container button:active {
+  background-color: #3e8e41;
+}
+/* Alarm Container to Set Alarm ends */
+
+/* Alarms Container to display set alarm starts */
+.alarms-container h2 {
+  color: var(--themetoggle-color);
+  margin-bottom: 10px;
+}
+
+#alarmsList {
+  list-style: none;
+  padding: 0;
+}
+
+#alarmsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alarms-container Button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.alarms-container Button:hover {
+  background-color: #c0392b;
+}
+/* Alarms Container to display set alarm ends */
+/*---------------section end----------------------*/
+
+/*---------------section start----------------------*/
+/* Toggle effect starts here */
+.theme-toggler {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.theme-toggle {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-label {
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  background: var(--themetoggle-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggle-text {
+  margin: 0 8px;
+  color: var(--theme-color);
+}
+
+.toggle-label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: var(--theme-color);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.theme-toggle:checked + .toggle-label {
+  justify-content: flex-start;
+}
+
+.theme-toggle:checked + .toggle-label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background-color: var(--theme-color);
+}
+
+.toggle-label:active:after {
+  width: 32px;
+  height: 32px;
+}
+/* Toggle effect ends here */
+/*---------------section end----------------------*/
