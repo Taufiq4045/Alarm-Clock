@@ -25,7 +25,7 @@ Your Alarm Clock is a web-based alarm clock application that provides a sleek an
 
 ## Demo
 
-[View Demo](https://alarm-online.netlify.app/)
+[View Demo](https://taufiq4045.github.io/Alarm-Clock/)
 
 ## Installation
 
