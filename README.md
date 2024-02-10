@@ -25,14 +25,14 @@ Your Alarm Clock is a web-based alarm clock application that provides a sleek an
 
 ## Demo
 
-[View Demo](#)  <!-- Add a link to your live demo if available -->
+[View Demo](https://alarm-online.netlify.app/)
 
 ## Installation
 
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-alarm-clock.git
+git clone https://github.com/Taufiq4045/Alarm-Clock.git
 ```
 Open the index.html file in your web browser.
 
